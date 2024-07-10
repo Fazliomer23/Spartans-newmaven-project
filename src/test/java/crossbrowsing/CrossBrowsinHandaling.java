@@ -5,20 +5,27 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.Scanner;
+
 public class CrossBrowsinHandaling {
     public static void main(String[] args) {
-
-        String browserType = "firefox";
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the browser type (chrome/firefox/edge): ");
+        String browserType = scanner.nextLine().toLowerCase();
         WebDriver driver;
 
-        if (browserType.equals("chrome")) {
-            driver = new ChromeDriver();
-        } else if (browserType.equals("firefox")) {
-            driver = new FirefoxDriver();
-        } else if (browserType.equals("edge")) {
-            driver = new EdgeDriver();
-        } else {
-            throw new RuntimeException("Wrong driver");
+        switch (browserType) {
+            case "chrome":
+                driver = new ChromeDriver();
+                break;
+            case "firefox":
+                driver = new FirefoxDriver();
+                break;
+            case "edge":
+                driver = new EdgeDriver();
+                break;
+            default:
+                throw new RuntimeException("Unsupported browser type: " + browserType);
         }
 
         driver.get("https://google.com");
@@ -28,3 +35,5 @@ public class CrossBrowsinHandaling {
         driver.quit();
     }
 }
+
+
