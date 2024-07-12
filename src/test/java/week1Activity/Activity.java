@@ -5,11 +5,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class ac1copy2 {
+public class Activity {
     public static void main(String[] args) throws InterruptedException {
+        /*
+    In Retail app, click on sign in then click on Create new Account
+    then fill up the form and sign up. Expectation is to Create new Account.
+    once account created make sure profile picture is displayed. (isDisplayed)
+    And print result of isDisplayed method.
+    Push to your repository
+     */
         WebDriver driver = new ChromeDriver();
         Thread.sleep(3000);
         driver.get("https://tek-retail-ui.azurewebsites.net/");
