@@ -13,8 +13,8 @@ public class Activity {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
 
-        // Open the Retail app
         driver.get("https://tek-retail-ui.azurewebsites.net/");
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.findElement(By.linkText("Sign in")).click();
