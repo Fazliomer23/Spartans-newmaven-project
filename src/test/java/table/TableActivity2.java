@@ -10,6 +10,13 @@ import java.util.List;
 
 public class TableActivity2 {
     public static void main(String[] args) {
+        //WebDriver driver = new ChromeDriver©;
+        //driver get ("https://dev.insurance.tekschool-students.com/");
+        //driver.manage).window(.maximize;
+        //driver-manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        //driver.findElement(By.linkText(Login"));
+        //driver. findElement (By.name ("username")) .sendKeys(…keysToSend: "supervisor"); driver. findElement (By name ("password")) .sendKeys (keysToSend: "tek_supervisor"); driver.findElement(By.xpath(xpathExpression: "//button[text()='Sign In']")).click();
+        //driver.findElement(By.linkText("Plans")).click();
         WebDriver driver = new ChromeDriver();
         driver.get("https://dev.insurance.tekschool-students.com/");
         driver.manage().window().maximize();
