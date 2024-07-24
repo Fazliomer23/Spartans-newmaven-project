@@ -13,7 +13,7 @@ public class TableActivity2 {
         WebDriver driver = new ChromeDriver();
         driver.get("https://dev.insurance.tekschool-students.com/");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         driver.findElement(By.linkText("Login")).click();
         driver.findElement(By.name("username")).sendKeys("supervisor");
@@ -21,7 +21,7 @@ public class TableActivity2 {
         driver.findElement(By.xpath("//button[text()='Sign In']")).click();
 
         driver.findElement(By.linkText("Plans")).click();
-        List<WebElement> priceElements = driver.findElements(By.xpath("//table//td[contains(@class, 'price')]"));
+        List<WebElement> priceElements = driver.findElements(By.xpath("//table//td[contains(text(), '$')]"));
         for (WebElement priceElement : priceElements) {
             String priceValue = priceElement.getText();
             System.out.println("Price Value: " + priceValue);
